@@ -1,5 +1,5 @@
 # AGV_ROS2
--  ROS2 Install Serial
+-  ROS2-Foxy Install Serial
 ```javasrcipt
 1. git clone https://github.com/ZhaoXiangBox/serial.git
 
