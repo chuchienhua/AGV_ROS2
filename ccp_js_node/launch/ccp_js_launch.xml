@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="ccp_node_name" default="ccp_js_node"/>
+  <arg name="joy_node_name" default="joy_node"/>
+  <arg name="namespace" default=""/>
+
+  <!-- Node configuration for ccp_js_node -->
+  <node pkg="ccp_js_node" exec="ccp_js_node" output="screen" name="$(var ccp_node_name)" namespace="$(var namespace)">
+    <param name="vx_sacler" value="0.5"/>
+    <param name="vy_sacler" value="0.5"/>
+    <param name="w_sacler" value="1.57"/>
+    <!-- Add more parameters if needed -->
+  </node>
+
+  <!-- Node configuration for joy_node -->
+  <node pkg="joy" exec="joy_node" output="screen" name="$(var joy_node_name)" namespace="$(var namespace)">
+    <!-- Here you can add parameters specific to joy_node if required -->
+  </node>
+</launch>
